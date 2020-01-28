@@ -1,0 +1,13 @@
+{
+  "name": "nexmo-azure-sms-send-receive",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "nexmo": "^2.6.0"
+  },
+  "devDependencies": {}
+}
