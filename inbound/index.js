@@ -7,6 +7,7 @@ module.exports = async function(context, req) {
   });
 
   const params = Object.assign(req.query, req.body);
+  context.log(params);
 
   if (params.text) {
     var response = [];
@@ -27,12 +28,12 @@ module.exports = async function(context, req) {
       },
       (err, responseData) => {
         if (err) {
-          console.log(err);
+          context.log(err);
         } else {
           if (responseData.messages[0]["status"] === "0") {
-            console.log("Message sent successfully.");
+            context.log("Message sent successfully.");
           } else {
-            console.log(
+            context.log(
               `Message failed with error: ${responseData.messages[0]["error-text"]}`
             );
           }
